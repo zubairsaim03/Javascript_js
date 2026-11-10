@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Counter App</title>
+</head>
+<body>
+
+    <h1>Digital Counter</h1>
+
+    <h2 id="count">0</h2>
+
+    <button id="increase">+</button>
+    <button id="decrease">-</button>
+    <button id="reset">Reset</button>
+
+    <script>
+        let initialCount = 0;
+        const countElement = document.getElementById('count');
+        let count = initialCount;
+        let increaseButton = document.getElementById('increase');
+        let decreaseButton = document.getElementById('decrease');   
+        let resetButton = document.getElementById('reset');
+        increaseButton.addEventListener('click', () => {
+            count++;
+            countElement.innerHTML = count;
+        });
+        decreaseButton.addEventListener('click', () => {
+            count--;
+            countElement.innerHTML = count;
+        });
+        resetButton.addEventListener('click', () => {
+            count = initialCount;
+            countElement.innerHTML = count;
+        });
+    </script>
+
+</body>
+</html>
